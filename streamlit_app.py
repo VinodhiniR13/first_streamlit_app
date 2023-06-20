@@ -65,6 +65,9 @@ streamlit.write('The user entered ', add_my_fruit)
 streamlit.write('Thanks for adding' , add_my_fruit)
 streamlit.stop()
 
-my_cur.execute("insert into fruit_load_list values('from streamlist')")
+def insert_row_snowflake(new_Fruit):
+with my_cnx.cursor() as my_cur:
+my_Cur.execute("insert into fruit_load_list values('"  + new_fruit +"' )")
+return "Thanks for adding " + new_fruit
 
    
